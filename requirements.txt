@@ -1,32 +1,37 @@
 numpy==2.1.2
 omegaconf==2.3.0
-msgspec==0.19.0
-rouge-score==0.1.2
-sacrebleu==2.5.1
+# msgspec==0.19.0  # Not needed for core module
+# rouge-score==0.1.2  # Evaluation metric - not needed
+# sacrebleu==2.5.1  # Evaluation metric - not needed
 sentencepiece==0.2.0
 tiktoken==0.9.0
-blobfile==3.0.0
+# blobfile==3.0.0  # File operations - not needed
 wandb==0.19.8
-viztracer==1.0.3
-lm-eval==0.4.8
-scipy==1.15.2
-pynvml==12.0.0
-orjson==3.10.15
+# viztracer==1.0.3  # Performance tracing - not needed
+# lm-eval==0.4.8  # Language model evaluation - not needed
+# scipy==1.15.2  # Scientific computing - not needed (duplicate)
+# pynvml==12.0.0  # GPU monitoring - not needed
+# orjson==3.10.15  # JSON serialization - not needed
 einops==0.8.1
 pillow==11.0.0
-pyahocorasick==2.1.0
-iopath==0.1.10
-torchdata==0.11.0
+# pyahocorasick==2.1.0  # String matching - not needed
+# iopath==0.1.10  # Detectron2 dependency - not needed
+# torchdata==0.11.0  # Detectron2 dependency - not needed
 torchcodec
 timm==1.0.17
-opencv-python==4.11.0.86
-pycocoevalcap==1.2
-scikit-learn==1.6.1
-scipy==1.15.2
-sentencepiece==0.2.0
-tokenizers==0.21.1
-webdataset==0.2.111
-fsspec
-datatrove
+# opencv-python==4.11.0.86  # Image processing - not needed
+# pycocoevalcap==1.2  # Caption evaluation - not needed
+# scikit-learn==1.6.1  # ML tools - not needed
+# tokenizers==0.21.1  # Transformers accelerator - not needed
+# webdataset==0.2.111  # Dataset loading - not needed
+# fsspec  # File system - not needed
+# datatrove  # Data processing - not needed
 ftfy
 transformers>=4.48.0
+
+# Hidden dependencies for core module (added)
+xformers
+regex
+huggingface_hub
+safetensors
+torchvision
